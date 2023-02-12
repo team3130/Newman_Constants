@@ -138,6 +138,15 @@ public final class Constants {
     public static double SwerveKd = 0.01;
     public static double SwerveKf = 0;
 
+    //Balancing PID values
+    public static double BalanceKp = 0; //do this first
+    public static double BalanceKi = 0; //then this
+    public static double BalanceKd = 0; //then this
+    public static double BalanceKf = 0; //idk what to do about this
+
+    //TODO: Find a good value for this idk
+    public static double BalanceConstrain = 300;
+
 
     public static double openLoopRampRate = 0.7;
 
