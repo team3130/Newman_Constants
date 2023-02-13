@@ -42,7 +42,9 @@ public final class Constants {
     public final static int CAN_hopperright = 16;
     public final static int CAN_hopperleft = 17;
 
-    public final static int CAN_PNM = 18;
+    public final static int CAN_SpinnyBar = 18;
+
+    public final static int CAN_PNM = 19;
 
     /**
      * PNM ID's
