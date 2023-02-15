@@ -53,6 +53,11 @@ public final class Constants {
     public static final int PNM_SmallSolenoid = 1;
     public final static int PNM_Grabber = 2;
 
+    /**
+     * Digital inputs
+     */
+    public static final int RIGHT_LIMIT_SWITCHES = 2;
+    public static final int LEFT_LIMIT_SWITCHES = 3;
 
     // Order should match side
     public static final int[] turningId = new int[] {CAN_LeftFrontSteer, CAN_LeftBackSteer, CAN_RightFrontSteer, CAN_RightBackSteer};
