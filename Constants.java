@@ -49,9 +49,9 @@ public final class Constants {
     /**
      * PNM ID's
      */
-    public static final int PNM_LargeSolenoid = 0;
+    public static final int PNM_LargeSolenoid = 2;
     public static final int PNM_SmallSolenoid = 1;
-    public final static int PNM_Grabber = 2;
+    public final static int PNM_Grabber = 3;
 
     /**
      * Digital inputs
