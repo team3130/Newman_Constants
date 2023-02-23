@@ -87,6 +87,7 @@ public final class Constants {
     public final static double kMaxSteerVoltage = 5d;
     public final static double kMaxDriveVoltage = 9d;
 
+    /** Chassis auton */
     public static final double kPXController = 3;
     public static final double kIXController = 0.5;
     public static final double kDXController = 0;
@@ -95,9 +96,12 @@ public final class Constants {
     public static final double kDYController = 0;
     public static final double kPThetaController = 5;
     public static final double kIThetaController = 0;
-    public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI;
-    public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI;
+
+    public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI; // max spiny acceleration
+    public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI; // max spiny velocity
+    // real max spiny speed (multiply by some number for safety)
     public static final double kMaxAngularSpeedRadiansPerSecond =  kPhysicalMaxAngularSpeedRadiansPerSecond;
+    // spiny PID constraints
     public static final TrapezoidProfile.Constraints kThetaControllerConstraints = new TrapezoidProfile.Constraints(
             kMaxAngularSpeedRadiansPerSecond, kMaxAngularAccelerationRadiansPerSecondSquared);
 
@@ -112,7 +116,7 @@ public final class Constants {
     /**
      * Timer Settings
      */
-    public static double timetoIntake = 0.25;
+    public final static double timetoIntake = 0.25;
 
     /**
      * For swerve drive
@@ -139,49 +143,59 @@ public final class Constants {
     public static final boolean kNavxReversed = true;
 
 
-    public static double SwerveKp = 0.55;
-    public static double SwerveKi = 0;
-    public static double SwerveKd = 0.01;
-    public static double SwerveKf = 0;
+    public final static double SwerveKp = 0.55;
+    public final static double SwerveKi = 0;
+    public final static double SwerveKd = 0.01;
+    public final static double SwerveKf = 0;
 
     //Balancing PID values
-    public static double BalanceKp = 2; //do this first
-    public static double BalanceKi = 0; //then this
-    public static double BalanceKd = 2.5; //then this
-    public static double BalanceKf = 0; //idk what to do about this
+    public final static double BalanceKp = 2; //do this first
+    public final static double BalanceKi = 0; //then this
+    public final static double BalanceKd = 2.5; //then this
+    public final static double BalanceKf = 0; //idk what to do about this
 
     //TODO: Find a good value for this idk
-    public static double BalanceConstrain = 300;
+    public final static double BalanceConstrain = 300;
 
 
-    public static double openLoopRampRate = 0.7;
+    public final static double openLoopRampRate = 0.7;
 
-    public static double kPhysicalMaxSpeedMetersPerSecond = 3.6;
+    public final static double kPhysicalMaxSpeedMetersPerSecond = 3.6;
 
-    public static double kDeadband = 0.075;
+    public final static double kDeadband = 0.075;
 
-    public static double kMaxAccelerationDrive = 7;
-    public static double kMaxAccelerationAngularDrive = 3;
+    public final static double kMaxAccelerationDrive = 7;
+    public final static double kMaxAccelerationAngularDrive = 3;
 
-    public static double kResetTime = 1.5;
+    public final static double kResetTime = 1.5;
 
         //Rotary Arm
-    public static double placementRotaryArmGearInRatio = 16d/61d;
-    public static double placementRotaryArmGearboxRatio = 12d/60d;
-    public static double ticksToRadiansRotaryPlacementArm = kEncoderResolution * 2 * Math.PI * placementRotaryArmGearInRatio * placementRotaryArmGearboxRatio;
-    public double radiansToTicksRotaryPlacementArm = 1/ ticksToRadiansRotaryPlacementArm;
-    public static double maxVelocityRotaryPlacementArm = Math.PI/4;
-    public static double maxAccelerationRotaryPlacementArm = Math.PI/8;
-    public int RotaryCAN_ID = CAN_RotaryArm;
+    public final static double kPlacementRotaryArmGearInRatio = 16d/61d;
+    public final static double kPlacementRotaryArmGearboxRatio = 12d/60d;
+    public final static double kTicksToRadiansRotaryPlacementArm = kEncoderResolution * 2 * Math.PI * kPlacementRotaryArmGearInRatio * kPlacementRotaryArmGearboxRatio;
+    public final static double kRadiansToTicksRotaryPlacementArm = 1/kTicksToRadiansRotaryPlacementArm;
+    public final static double kMaxVelocityRotaryPlacementArm = Math.PI/4;
+    public final static double kMaxAccelerationRotaryPlacementArm = Math.PI/8;
 
-    //Extension Arm
-    public static double placementExtensionArmGearboxRatio = 16d / 61d;
-    public static double placementExtensionArmGearInRatio = 12d / 60d;
-    public static double ticksToRadiansExtensionPlacement = kEncoderResolution * 2 * Math.PI * placementExtensionArmGearboxRatio * placementExtensionArmGearInRatio;
-    public static double radiansToTicksExtensionPlacement = 1 / ticksToRadiansExtensionPlacement;
-    public static double maxVelocityPlacementExtensionArm = Math.PI / 4;
-    public static double maxAccelerationPlacementExtensionArm = Math.PI / 8;
-    public int ExtensionCAN_ID = CAN_ExtensionArm;
+    /**
+     * Extension arm
+     */
+    public final static double kExtensionShaftRadius = Units.inchesToMeters(0.25); // 1/4 inch
+    public final static double kExtensionArmLength = 1.016; //TODO: Find real value
+    public final static double kMassOfExtensionArm = 1; //TODO: Find real value
+    public final static double kAccelerationDueToGravity = 9.8;
+    // Torque without being scaled by the sin(theta)
+    public final static double kMaxExtensionArmTorque = kExtensionArmLength * kAccelerationDueToGravity * kMassOfExtensionArm;
+
+    public final static double kPercentOutputToHoldAtMaxExtension = 0.1; //TODO: Find real value
+    public final static double kTorqueToPercentOutScalar = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLength * kMassOfExtensionArm * kAccelerationDueToGravity); // magic number that turns torque into motor output
+    public final static double kExtensionArmGearRatio = 1;
+    public final static double kTicksToRadiansExtensionPlacement = kEncoderResolution * 2 * Math.PI * kExtensionArmGearRatio;
+    // radians to distance is just radians * radius
+    public final static double kRadiansToTicksExtensionPlacement = 1 / kTicksToRadiansExtensionPlacement;
+    public final static double kTicksToMetersExtensionPlacement = kTicksToRadiansExtensionPlacement * kExtensionShaftRadius;
+    public final static double kMaxVelocityPlacementExtensionArm = 0.2;
+    public final static double kMaxAccelerationPlacementExtensionArm = 0.2;
 
     public static class Side {
          public static final int LEFT_FRONT = 0;
@@ -204,14 +218,14 @@ public final class Constants {
         public static final double yaw = 0;
         public static final double roll = 0;
 
-        public static double confidenceN1 = 0;
-        public static double confidenceN2 = 0;
-        public static double confidenceN3 = 0;
+        public static double confidenceN1 = 0; // I'm guessing x component confidence
+        public static double confidenceN2 = 0; // I'm guessing y component confidence
+        public static double confidenceN3 = 0; // I'm guessing theta component confidence
 
         public final static int kMedianFilterWindowSize = 5;
     }
 
-    // for the KugelMediaFilter
+    // error gain for the KugelMediaFilter
     public static final double kKugelMedianFilterP = 7/(Math.PI);
 
     public static class Buttons {
