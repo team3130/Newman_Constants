@@ -4,6 +4,7 @@
 
 package frc.robot.Newman_Constants;
 
+import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.trajectory.TrapezoidProfile;
 import edu.wpi.first.math.util.Units;
@@ -186,35 +187,11 @@ public final class Constants {
     public final static double kExtensionArmLength = 1.016; //TODO: Find real value
     public final static double kMassOfExtensionArm = 1; //TODO: Find real value
     public final static double kAccelerationDueToGravity = 9.8;
-    // Torque without being scaled by the sin(theta)
-    public final static double kExtensionArmTorqueGravity = kExtensionArmLength * kAccelerationDueToGravity * kMassOfExtensionArm;
+
     public final static double kExtensionArmSpringXPosition = 1; // TODO: Find real value
     public final static double kExtensionArmSpringYPosition = 1; // TODO: Find real value
 
-    /**
-     * calculates the length of the placement spring
-     * @param length extension arm length
-     * @param angle rotary angle
-     * @return A translation of the springs direction and magnitude
-     */
-    public static Translation2d calculateExtensionArmSpringLength(double length, double angle) {
-        double xSpring = length * Math.cos(angle);
-        double ySpring = length * Math.sin(angle);
-
-        return new Translation2d(
-                Math.sqrt(Math.pow(xSpring - kExtensionArmSpringXPosition, 2) + Math.pow(ySpring - kExtensionArmSpringYPosition, 2)),
-                new Rotation2d(Math.atan2(ySpring - kExtensionArmSpringYPosition, xSpring - kExtensionArmSpringXPosition))
-        );
-    }
-    public final static double KExtensionArmSpringConstant = 1; // TODO: Find real value
-
-    /**
-     * Calculates the torque of the spring extension arm
-     * @return the torque that the spring exerts
-     */
-    public static double calculateSpringExtensionArmTorque() {
-        //TODO: FINSIH THIS LATER
-    }
+    public final static double kExtensionArmSpringConstant = 1; // TODO: Find real value
 
     public final static double kPercentOutputToHoldAtMaxExtension = 0.1; //TODO: Find real value
     public final static double kTorqueToPercentOutScalar = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLength * kMassOfExtensionArm * kAccelerationDueToGravity); // magic number that turns torque into motor output
@@ -225,6 +202,8 @@ public final class Constants {
     public final static double kTicksToMetersExtensionPlacement = kTicksToRadiansExtensionPlacement * kExtensionShaftRadius;
     public final static double kMaxVelocityPlacementExtensionArm = 0.2;
     public final static double kMaxAccelerationPlacementExtensionArm = 0.2;
+    // Distance from the center axle of the springs mount position on the rotary arm
+    public static final double kExtensionArmSpringMountPosition = 0.23; // TODO: Find real value
 
     public static class Side {
          public static final int LEFT_FRONT = 0;
