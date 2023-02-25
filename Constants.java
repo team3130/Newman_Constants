@@ -4,12 +4,9 @@
 
 package frc.robot.Newman_Constants;
 
-import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.trajectory.TrapezoidProfile;
 import edu.wpi.first.math.util.Units;
-import edu.wpi.first.math.Pair;
-import edu.wpi.first.math.geometry.Translation2d;
 
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
@@ -180,13 +177,16 @@ public final class Constants {
     public final static double kMaxVelocityRotaryPlacementArm = Math.PI/4;
     public final static double kMaxAccelerationRotaryPlacementArm = Math.PI/8;
 
-    /**
-     * Extension arm
-     */
-    public final static double kExtensionShaftRadius = Units.inchesToMeters(0.25); // 1/4 inch
-    public final static double kExtensionArmLength = 1.016; //TODO: Find real value
-    public final static double kMassOfExtensionArm = 1; //TODO: Find real value
-    public final static double kAccelerationDueToGravity = 9.8;
+    //Extension Arm
+    public static double placemenExtensionShaftRadius = Units.inchesToMeters(.25);
+    public static double placementExtensionArmGearboxRatio = 16d / 61d;
+    public static double placementExtensionArmGearInRatio = 12d / 60d;
+    public static double ticksToRadiansExtensionPlacement = kEncoderResolution * 2 * Math.PI * placementExtensionArmGearboxRatio * placementExtensionArmGearInRatio;
+    public static double ticksToMetersExtensionPlacement = ticksToRadiansExtensionPlacement * placemenExtensionShaftRadius;
+    public static double radiansToTicksExtensionPlacement = 1 / ticksToRadiansExtensionPlacement;
+    public static double maxVelocityPlacementExtensionArm = Math.PI / 4;
+    public static double maxAccelerationPlacementExtensionArm = Math.PI / 8;
+    public int ExtensionCAN_ID = CAN_ExtensionArm;
 
     public final static double kExtensionArmSpringXPosition = 1; // TODO: Find real value
     public final static double kExtensionArmSpringYPosition = 1; // TODO: Find real value
