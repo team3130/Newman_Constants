@@ -97,7 +97,7 @@ public final class Constants {
     public static final double kPYController = 3;
     public static final double kIYController = 0.5;
     public static final double kDYController = 0;
-    public static final double kPThetaController = 5;
+    public static final double kPThetaController = 7;
     public static final double kIThetaController = 0;
 
     public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI; // max spiny acceleration
