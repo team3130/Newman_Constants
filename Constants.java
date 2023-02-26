@@ -194,12 +194,12 @@ public final class Constants {
     public final static double kExtensionArmSpringConstant = 1; // TODO: Find real value
 
     public final static double kPercentOutputToHoldAtMaxExtension = 0.1; //TODO: Find real value
-    public final static double kTorqueToPercentOutScalar = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLength * kMassOfExtensionArm * kAccelerationDueToGravity); // magic number that turns torque into motor output
+    // public final static double kTorqueToPercentOutScalar = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLength * kMassOfExtensionArm * kAccelerationDueToGravity); // magic number that turns torque into motor output
     public final static double kExtensionArmGearRatio = 1;
     public final static double kTicksToRadiansExtensionPlacement = kEncoderResolution * 2 * Math.PI * kExtensionArmGearRatio;
     // radians to distance is just radians * radius
     public final static double kRadiansToTicksExtensionPlacement = 1 / kTicksToRadiansExtensionPlacement;
-    public final static double kTicksToMetersExtensionPlacement = kTicksToRadiansExtensionPlacement * kExtensionShaftRadius;
+    // public final static double kTicksToMetersExtensionPlacement = kTicksToRadiansExtensionPlacement * kExtensionShaftRadius;
     public final static double kMaxVelocityPlacementExtensionArm = 0.2;
     public final static double kMaxAccelerationPlacementExtensionArm = 0.2;
     // Distance from the center axle of the springs mount position on the rotary arm
