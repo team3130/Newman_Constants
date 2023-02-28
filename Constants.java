@@ -169,7 +169,7 @@ public final class Constants {
 
     public final static double kResetTime = 1.5;
 
-        //Rotary Arm
+    //Rotary Arm
     public final static double kPlacementRotaryArmGearInRatio = 16d/61d;
     public final static double kPlacementRotaryArmGearboxRatio = 12d/60d;
     public final static double kTicksToRadiansRotaryPlacementArm = kEncoderResolution * 2 * Math.PI * kPlacementRotaryArmGearInRatio * kPlacementRotaryArmGearboxRatio;
@@ -191,7 +191,7 @@ public final class Constants {
     public final static double kExtensionArmSpringConstant = 1; // TODO: Find real value
 
     public final static double kPercentOutputToHoldAtMaxExtension = 0.1; //TODO: Find real value
-    public final static double kTorqueToPercentOutScalar = kPercentOutputToHoldAtMaxExtension / (placementExtensionArmLength * kMassOfExtensionArm * kAccelerationDueToGravity); // magic number that turns torque into motor output
+    public final static double kTorqueToPercentOutScalar = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLength * kMassOfExtensionArm * kAccelerationDueToGravity); // magic number that turns torque into motor output
     public final static double kExtensionArmGearRatio = 1;
     public final static double kTicksToRadiansExtensionPlacement = kEncoderResolution * 2 * Math.PI * kExtensionArmGearRatio;
     // radians to distance is just radians * radius
