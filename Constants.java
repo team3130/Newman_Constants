@@ -194,6 +194,8 @@ public final class Constants {
     public final static double kTorqueToPercentOutScalar = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLength * kMassOfExtensionArm * kAccelerationDueToGravity); // magic number that turns torque into motor output
     public final static double kExtensionArmGearRatio = 1;
     public final static double kTicksToRadiansExtensionPlacement = kEncoderResolution * 2 * Math.PI * kExtensionArmGearRatio;
+    public final static double kExtensionHexShaftRadius = Units.inchesToMeters(0.25);
+    public final static double kTicksToMetersExtension = kTicksToRadiansExtensionPlacement * kExtensionHexShaftRadius;
     // radians to distance is just radians * radius
     public final static double kRadiansToTicksExtensionPlacement = 1 / kTicksToRadiansExtensionPlacement;
     // public final static double kTicksToMetersExtensionPlacement = kTicksToRadiansExtensionPlacement * kExtensionShaftRadius;
