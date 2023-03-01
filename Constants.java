@@ -149,10 +149,10 @@ public final class Constants {
     public final static double SwerveKf = 0;
 
     //Balancing PID values
-    public final static double BalanceKp = 2; //do this first
+    public final static double BalanceKp = 0; //do this first
     public final static double BalanceKi = 0; //then this
-    public final static double BalanceKd = 2.5; //then this
-    public final static double BalanceKf = 0; //idk what to do about this
+    public final static double BalanceKd = -2.25; //then this
+    public final static double BalanceKf = 0.5; //idk what to do about this
 
     //TODO: Find a good value for this idk
     public final static double BalanceConstrain = 300;
