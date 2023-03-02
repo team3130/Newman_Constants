@@ -43,6 +43,8 @@ public final class Constants {
     public final static int CAN_hopperleft = 17;
 
     public final static int CAN_SpinnyBar = 18;
+    public final static int CAN_pivot = 20;
+
 
     public final static int CAN_PNM = 19;
 
@@ -57,6 +59,9 @@ public final class Constants {
      * Digital inputs
      */
     public static final int PUNCHY_LIMIT_SWITCH = 0;
+    public static final int DIO_LowPosition = 1;
+    public static final int DIO_MidPosition = 2;
+    public static final int DIO_HighPosition = 3;
 
     // Order should match side
     public static final int[] turningId = new int[] {CAN_LeftFrontSteer, CAN_LeftBackSteer, CAN_RightFrontSteer, CAN_RightBackSteer};
