@@ -176,6 +176,13 @@ public final class Constants {
     public final static double kMaxAccelerationAngularDrive = 3;
 
     public final static double kResetTime = 1.5;
+	
+    //Intake
+    public final static double kIntakePivotMotorSpeed = 0.5;  //TODO set actual value
+    public final static double kIntakePivotGearInRatio = 16d/61d;  //TODO get real number
+    public final static double kIntakePivotGearboxRatio = 12d/60d;  //TODO get real number
+    public final static double kTicksToRadiansIntakePivot = kEncoderResolution * 2 * Math.PI * kIntakePivotGearInRatio * kIntakePivotGearboxRatio;
+
 
     //Rotary Arm
     public final static double kPlacementRotaryArmGearInRatio = 16d/61d;
