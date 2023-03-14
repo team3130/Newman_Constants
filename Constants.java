@@ -62,9 +62,7 @@ public final class Constants {
      * Digital inputs
      */
     public static final int PUNCHY_LIMIT_SWITCH = 0;
-    public static final int DIO_LowPosition = 1;
-    public static final int DIO_MidPosition = 2;
-    public static final int DIO_HighPosition = 3;
+    public static final int DIO_BreakBeam = 1;
 
     // Order should match side
     public static final int[] turningId = new int[] {CAN_LeftFrontSteer, CAN_LeftBackSteer, CAN_RightFrontSteer, CAN_RightBackSteer};
