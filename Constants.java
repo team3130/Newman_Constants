@@ -193,20 +193,19 @@ public final class Constants {
     /**
      * Extension arm
      */
-    public final static double kExtensionShaftRadius = Units.inchesToMeters(0.25); // 1/4 inch
-    public final static double kExtensionArmLengthExtended = Units.inchesToMeters(34); //TODO: Find real value
-    public final static double kMassOfExtensionArm = 1; //TODO: Find real value
+    public final static double kExtensionArmLengthExtended = Units.inchesToMeters(34);
+    /*public final static double kMassOfExtensionArm = 1; //TODO: Find real value*/
     public final static double kAccelerationDueToGravity = 9.8;
-    public final static double kExtensionArmLengthRetracted = Units.inchesToMeters(25); // TODO: Find real value
+    public final static double kExtensionArmLengthRetracted = Units.inchesToMeters(25);
 
     public final static double kExtensionArmSpringXPosition = 1; // TODO: Find real value
     public final static double kExtensionArmSpringYPosition = 1; // TODO: Find real value
 
     public final static double kExtensionArmSpringConstant = 1; // TODO: Find real value
 
-    public final static double kPercentOutputToHoldAtMaxExtension = 0.1; //TODO: Find real value
-    public final static double kTorqueToPercentOutScalar = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLengthExtended * kMassOfExtensionArm * kAccelerationDueToGravity); // magic number that turns torque into motor output
-    public final static double kExtensionArmGearRatio = 1;
+    public final static double kPercentOutputToHoldAtMaxExtension = 0.11; //TODO: Find real value
+    public final static double kTorqueToPercentOutScalar = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLengthExtended); // magic number that turns torque into motor output
+    public final static double kExtensionArmGearRatio = 12;
     public final static double kTicksToRadiansExtensionPlacement = kEncoderResolution * 2 * Math.PI * kExtensionArmGearRatio;
     public final static double kExtensionHexShaftRadius = Units.inchesToMeters(0.25);
     public final static double kTicksToMetersExtension = kTicksToRadiansExtensionPlacement * kExtensionHexShaftRadius;
