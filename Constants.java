@@ -45,7 +45,6 @@ public final class Constants {
     public final static int CAN_hopperleft = 17;
 
     public final static int CAN_SpinnyBar = 18;
-    public final static int CAN_pivot = 20;
 
 
     public final static int CAN_PNM = 19;
