@@ -194,10 +194,10 @@ public final class Constants {
      * Extension arm
      */
     public final static double kExtensionShaftRadius = Units.inchesToMeters(0.25); // 1/4 inch
-    public final static double kExtensionArmLengthExtended = 1.016; //TODO: Find real value
+    public final static double kExtensionArmLengthExtended = Units.inchesToMeters(34); //TODO: Find real value
     public final static double kMassOfExtensionArm = 1; //TODO: Find real value
     public final static double kAccelerationDueToGravity = 9.8;
-    public final static double kExtensionArmLengthRetracted = 0.5; // TODO: Find real value
+    public final static double kExtensionArmLengthRetracted = Units.inchesToMeters(25); // TODO: Find real value
 
     public final static double kExtensionArmSpringXPosition = 1; // TODO: Find real value
     public final static double kExtensionArmSpringYPosition = 1; // TODO: Find real value
