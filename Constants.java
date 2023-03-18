@@ -96,7 +96,7 @@ public final class Constants {
     public final static double kMaxRotaryArmVoltage = 9d;
     public final static double kMaxExtensionArmVoltage = 9d;
     public final static double kMaxVoltageHopper = 6d;
-    public final static double kMaxVoltageIntakeBeaterBar = 6d;
+    public final static double kMaxVoltageIntakeBeaterBar = 10d;
 
     /** Chassis auton */
     public static final double kPXController = 3;
@@ -107,6 +107,9 @@ public final class Constants {
     public static final double kDYController = 0;
     public static final double kPThetaController = 7;
     public static final double kIThetaController = 0;
+
+    public static final double kMaxExtensionLength = 206316;
+    public static final double kMaxRotaryLength = 52669;
 
     public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI; // max spiny acceleration
     public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI; // max spiny velocity
