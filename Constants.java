@@ -45,7 +45,6 @@ public final class Constants {
     public final static int CAN_hopperleft = 17;
 
     public final static int CAN_SpinnyBar = 18;
-    public final static int CAN_pivot = 20;
 
 
     public final static int CAN_PNM = 19;
@@ -53,8 +52,8 @@ public final class Constants {
     /**
      * PNM ID's
      */
-    public static final int PNM_LargeSolenoid = 3;
-    public static final int PNM_SmallSolenoid = 2;
+    public static final int PNM_LargeSolenoid = 2;
+    public static final int PNM_SmallSolenoid = 3;
     public final static int PNM_Grabber = 0;
     public static final int PNM_Brake = 1;  //TODO get real number
 
@@ -150,10 +149,32 @@ public final class Constants {
     public static final boolean kNavxReversed = true;
 
 
-    public final static double SwerveKp = 0.55;
-    public final static double SwerveKi = 0;
-    public final static double SwerveKd = 0.01;
-    public final static double SwerveKf = 0;
+    public final static double SwerveKpFrontRight = 0.55;
+    public final static double SwerveKiFrontRight = 0;
+    public final static double SwerveKdFrontRight = 0.01;
+    public final static double SwerveKfFrontRight = 0;
+
+    public final static double SwerveKpFrontLeft = 0.55;
+    public final static double SwerveKiFrontLeft = 0;
+    public final static double SwerveKdFrontLeft = 0.01;
+    public final static double SwerveKfFrontLeft = 0;
+
+
+    public final static double SwerveKpBackLeft = 0.55;
+    public final static double SwerveKiBackLeft = 0;
+    public final static double SwerveKdBackLeft = 0.01;
+    public final static double SwerveKfBackLeft = 0;
+
+    public final static double SwerveKpBackRight = 0.55;
+    public final static double SwerveKiBackRight = 0;
+    public final static double SwerveKdBackRight = 0.01;
+    public final static double SwerveKfBackRight = 0;
+
+    public final static double[] SwerveKp = new double[] {SwerveKpFrontLeft, SwerveKpBackLeft, SwerveKpFrontRight, SwerveKpBackRight};
+    public final static double[] SwerveKi = new double[] {SwerveKiFrontLeft, SwerveKiBackLeft, SwerveKiFrontRight, SwerveKiBackRight};
+    public final static double[] SwerveKd = new double[] {SwerveKdFrontLeft, SwerveKdBackLeft, SwerveKdFrontRight, SwerveKdBackRight};
+    public final static double[] SwerveKf = new double[] {SwerveKfFrontLeft, SwerveKfBackLeft, SwerveKfFrontRight, SwerveKfBackRight};
+
 
     //Balancing PID values
     public final static double BalanceKp = -2.25; //do this first
