@@ -63,6 +63,7 @@ public final class Constants {
      */
     public static final int PUNCHY_LIMIT_SWITCH = 0;
     public static final int DIO_BreakBeam = 1;
+    public static final int ROTARY_ARM_LIMIT_SWITCH = 2;
 
     // Order should match side
     public static final int[] turningId = new int[] {CAN_LeftFrontSteer, CAN_LeftBackSteer, CAN_RightFrontSteer, CAN_RightBackSteer};
