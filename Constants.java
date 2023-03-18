@@ -90,8 +90,14 @@ public final class Constants {
     public static final double SteerTicksToRadsPerSecond = SteerTicksToRads * 10; // multiply by velocity
     public final static double DriveTicksToMeters = kWheelDiameter * Math.PI * 1/(kEncoderResolution * kDriveGearRatio); // multiply by
     public static final double DriveTicksToMetersPerSecond = DriveTicksToMeters * 10; // multiply by velocity
+
+
     public final static double kMaxSteerVoltage = 5d;
     public final static double kMaxDriveVoltage = 9d;
+    public final static double kMaxRotaryArmVoltage = 9d;
+    public final static double kMaxExtensionArmVoltage = 9d;
+    public final static double kMaxVoltageHopper = 6d;
+    public final static double kMaxVoltageIntakeBeaterBar = 6d;
 
     /** Chassis auton */
     public static final double kPXController = 3;
