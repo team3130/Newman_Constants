@@ -213,9 +213,8 @@ public final class Constants {
 
 
     //Rotary Arm
-    public final static double kPlacementRotaryArmGearInRatio = 16d/61d;
-    public final static double kPlacementRotaryArmGearboxRatio = 12d/60d;
-    public final static double kTicksToRadiansRotaryPlacementArm = kEncoderResolution * 2 * Math.PI * kPlacementRotaryArmGearInRatio * kPlacementRotaryArmGearboxRatio;
+    public final static double kRotaryPlacementArmGearRatio = 0.0119008879; // experimentally found gear ratio
+    public final static double kTicksToRadiansRotaryPlacementArm = (1/kEncoderResolution) * 2 * Math.PI * kRotaryPlacementArmGearRatio;
     public final static double kRadiansToTicksRotaryPlacementArm = 1/kTicksToRadiansRotaryPlacementArm;
     public final static double kMaxVelocityRotaryPlacementArm = Math.PI/4;
     public final static double kMaxAccelerationRotaryPlacementArm = Math.PI/8;
