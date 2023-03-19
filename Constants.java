@@ -219,6 +219,11 @@ public final class Constants {
     public final static double kMaxVelocityRotaryPlacementArm = Math.PI/4;
     public final static double kMaxAccelerationRotaryPlacementArm = Math.PI/8;
 
+    public static final double[] yPositionsForRowBounds = new double[] {
+            //0       1       2       3       4       5       6       7       8
+            0, 0.7875, 1.3465, 1.9055, 2.4645, 3.0235, 3.5825, 4.1415, 4.7005, 5.5
+        };
+
     /**
      * Extension arm
      */
