@@ -95,7 +95,7 @@ public final class Constants {
     public final static double kMaxDriveVoltage = 9d;
     public final static double kMaxRotaryArmVoltage = 9d;
     public final static double kMaxExtensionArmVoltage = 9d;
-    public final static double kMaxVoltageHopper = 6d;
+    public final static double kMaxVoltageHopper = 9d;
     public final static double kMaxVoltageIntakeBeaterBar = 10d;
 
     /** Chassis auton */
