@@ -20,6 +20,7 @@ import edu.wpi.first.wpilibj.DriverStation;
 public final class Constants {
     public static final boolean debugMode = true;
     public static final boolean kEliminationRound = (DriverStation.getMatchType() == DriverStation.MatchType.Elimination);
+
     /**
      * CAN
      */
@@ -185,7 +186,6 @@ public final class Constants {
     //TODO: Find a good value for this idk
     public final static double BalanceConstrain = 300;
 
-
     public final static double openLoopRampRate = 0.7;
 
     public final static double kPhysicalMaxSpeedMetersPerSecond = 3.6;
@@ -213,19 +213,11 @@ public final class Constants {
      * Extension arm
      */
     public final static double kExtensionArmLengthExtended = Units.inchesToMeters(34);
-    /*public final static double kMassOfExtensionArm = 1; //TODO: Find real value*/
-    public final static double kAccelerationDueToGravity = 9.8;
-    public final static double kExtensionArmLengthRetracted = Units.inchesToMeters(25);
 
-    public final static double kExtensionArmSpringXPosition = 1; // TODO: Find real value
-    public final static double kExtensionArmSpringYPosition = 1; // TODO: Find real value
-
-    public final static double kExtensionArmSpringConstant = 1; // TODO: Find real value
-
-    public final static double kPercentOutputToHoldAtMaxExtension = 0.11; //TODO: Find real value
-    public final static double kTorqueToPercentOutScalar = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLengthExtended); // magic number that turns torque into motor output
-    public final static double kExtensionArmGearRatio = 12;
-    public final static double kTicksToRadiansExtensionPlacement = kEncoderResolution * 2 * Math.PI * kExtensionArmGearRatio;
+    public final static double kPercentOutputToHoldAtMaxExtension = 0.09; //TODO: Find real value
+    public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLengthExtended); // magic number that turns torque into motor output
+    public final static double kExtensionArmGearRatio = 0.25;
+    public final static double kTicksToRadiansExtensionPlacement = 1/(kEncoderResolution) * 2 * Math.PI * kExtensionArmGearRatio;
     public final static double kExtensionHexShaftRadius = Units.inchesToMeters(0.25);
     public final static double kTicksToMetersExtension = kTicksToRadiansExtensionPlacement * kExtensionHexShaftRadius;
     // radians to distance is just radians * radius
