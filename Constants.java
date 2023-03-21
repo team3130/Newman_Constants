@@ -108,7 +108,7 @@ public final class Constants {
     public static final double kPThetaController = 7;
     public static final double kIThetaController = 0;
 
-    public static final double kMaxExtensionLength = 206316;
+    public static final double kMaxExtensionLength = 175000;
     public static final double kMaxRotaryLength = 52669;
 
     public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI; // max spiny acceleration
