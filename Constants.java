@@ -68,10 +68,10 @@ public final class Constants {
     /**
      * Encoder offsets
      */
-    public static final double kTopLeftOffset = Math.toRadians(264.90);
-    public static final double kBottomLeftOffset = Math.toRadians(275.27);
+    public static final double kTopLeftOffset = Math.toRadians(268.682 - 180);
+    public static final double kBottomLeftOffset = Math.toRadians(281.426 - 180);
     public static final double kTopRightOffset = Math.toRadians(129.3);
-    public static final double kBottomRightOffset = Math.toRadians(357.71484);
+    public static final double kBottomRightOffset = Math.toRadians(0);
     public static final double[] kCanCoderOffsets = new double[] {kTopLeftOffset, kBottomLeftOffset, kTopRightOffset, kBottomRightOffset};
 
     /**
@@ -151,23 +151,23 @@ public final class Constants {
 
 
     public final static double SwerveKpFrontRight = 1.2;
-    public final static double SwerveKiFrontRight = 0;
+    public final static double SwerveKiFrontRight = 0.05;
     public final static double SwerveKdFrontRight = 0.01;
     public final static double SwerveKfFrontRight = 0;
 
     public final static double SwerveKpFrontLeft = 1.2;
-    public final static double SwerveKiFrontLeft = 0;
+    public final static double SwerveKiFrontLeft = 0.05;
     public final static double SwerveKdFrontLeft = 0.01;
     public final static double SwerveKfFrontLeft = 0;
 
 
     public final static double SwerveKpBackLeft = 1.5;
-    public final static double SwerveKiBackLeft = 0;
+    public final static double SwerveKiBackLeft = 0.05;
     public final static double SwerveKdBackLeft = 0.01;
     public final static double SwerveKfBackLeft = 0;
 
     public final static double SwerveKpBackRight = 1.2;
-    public final static double SwerveKiBackRight = 0;
+    public final static double SwerveKiBackRight = 0.05;
     public final static double SwerveKdBackRight = 0.01;
     public final static double SwerveKfBackRight = 0;
 
@@ -182,9 +182,6 @@ public final class Constants {
     public final static double BalanceKi = 0; //this isn't real
     public final static double BalanceKd = 0; //then this
     public final static double BalanceKf = 0.5; //idk what to do about this
-
-    //TODO: Find a good value for this idk
-    public final static double BalanceConstrain = 300;
 
     public final static double openLoopRampRate = 0.7;
 
@@ -225,8 +222,6 @@ public final class Constants {
     // public final static double kTicksToMetersExtensionPlacement = kTicksToRadiansExtensionPlacement * kExtensionShaftRadius;
     public final static double kMaxVelocityPlacementExtensionArm = 0.2;
     public final static double kMaxAccelerationPlacementExtensionArm = 0.2;
-    // Distance from the center axle of the springs mount position on the rotary arm
-    public static final double kExtensionArmSpringMountPosition = 0.23; // TODO: Find real value
 
     public static class Side {
          public static final int LEFT_FRONT = 0;
@@ -240,12 +235,12 @@ public final class Constants {
      */
     public static class Camera {
         // The position and orientation of the camera in meters
-        public static final double xPos = Units.inchesToMeters(12);
-        public static final double yPos = Units.inchesToMeters(0);
-        public static final double zPos = Units.inchesToMeters(4.5);
+        public static final double xPos = Units.inchesToMeters(0);
+        public static final double yPos = Units.inchesToMeters(12.5);
+        public static final double zPos = Units.inchesToMeters(38);
 
         // TODO: Find these values
-        public static final double pitch = 0;
+        public static final double pitch = -45;
         public static final double yaw = 0;
         public static final double roll = 0;
 
