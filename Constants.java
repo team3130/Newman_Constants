@@ -49,10 +49,9 @@ public final class Constants {
     /**
      * PNM ID's
      */
-    public static final int PNM_LargeSolenoid = 2;
     public static final int PNM_SmallSolenoid = 3;
     public final static int PNM_Grabber = 0;
-    public static final int PNM_Brake = 1;  //TODO get real number
+    public static final int PNM_Brake = 1;
 
     /**
      * Digital inputs
@@ -105,7 +104,7 @@ public final class Constants {
     public static final double kPThetaController = 7;
     public static final double kIThetaController = 0;
 
-    public static final double kMaxExtensionLength = 206316;
+    public static final double kMaxExtensionLength = 175000;
     public static final double kMaxRotaryLength = 52669;
 
     public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI; // max spiny acceleration
@@ -124,10 +123,6 @@ public final class Constants {
 	// the front-to-back distance between the drivetrain wheels, should be measured from center to center
 	public static final double wheelBase_m = 0.61;
 
-    /**
-     * Timer Settings
-     */
-    public final static double timetoIntake = 0.25;
 
     /**
      * For swerve drive
@@ -154,23 +149,23 @@ public final class Constants {
     public static final boolean kNavxReversed = true;
 
 
-    public final static double SwerveKpFrontRight = 0.55;
+    public final static double SwerveKpFrontRight = 1.2;
     public final static double SwerveKiFrontRight = 0;
     public final static double SwerveKdFrontRight = 0.01;
     public final static double SwerveKfFrontRight = 0;
 
-    public final static double SwerveKpFrontLeft = 0.55;
+    public final static double SwerveKpFrontLeft = 1.2;
     public final static double SwerveKiFrontLeft = 0;
     public final static double SwerveKdFrontLeft = 0.01;
     public final static double SwerveKfFrontLeft = 0;
 
 
-    public final static double SwerveKpBackLeft = 0.55;
+    public final static double SwerveKpBackLeft = 1.5;
     public final static double SwerveKiBackLeft = 0;
     public final static double SwerveKdBackLeft = 0.01;
     public final static double SwerveKfBackLeft = 0;
 
-    public final static double SwerveKpBackRight = 0.55;
+    public final static double SwerveKpBackRight = 1.2;
     public final static double SwerveKiBackRight = 0;
     public final static double SwerveKdBackRight = 0.01;
     public final static double SwerveKfBackRight = 0;
@@ -201,13 +196,6 @@ public final class Constants {
     public final static double kMaxAccelerationAngularDrive = 3;
 
     public final static double kResetTime = 1.5;
-	
-    //Intake
-    public final static double kIntakePivotMotorSpeed = 0.5;  //TODO set actual value
-    public final static double kIntakePivotGearInRatio = 16d/61d;  //TODO get real number
-    public final static double kIntakePivotGearboxRatio = 12d/60d;  //TODO get real number
-    public final static double kTicksToRadiansIntakePivot = kEncoderResolution * 2 * Math.PI * kIntakePivotGearInRatio * kIntakePivotGearboxRatio;
-
 
     //Rotary Arm
     public final static double kRotaryPlacementArmGearRatio = 0.0119008879; // experimentally found gear ratio
