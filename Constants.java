@@ -50,7 +50,7 @@ public final class Constants {
     /**
      * PNM ID's
      */
-    public static final int PNM_SmallSolenoid = 3;
+    public static final int PNM_SmallSolenoid = 2;
     public final static int PNM_Grabber = 0;
     public static final int PNM_Brake = 1;
 
@@ -89,7 +89,7 @@ public final class Constants {
 
 
     public final static double kMaxSteerVoltage = 5d;
-    public final static double kMaxDriveVoltage = 9d;
+    public final static double kMaxDriveVoltage = 8d;
     public final static double kMaxRotaryArmVoltage = 9d;
     public final static double kMaxExtensionArmVoltage = 9d;
     public final static double kMaxVoltageHopper = 9d;
@@ -150,20 +150,20 @@ public final class Constants {
     public static final boolean kNavxReversed = true;
 
 
-    public final static double SwerveKpFrontRight = 1.2;
+    public final static double SwerveKpFrontRight = 1.35;
     public final static double SwerveKiFrontRight = 0.05;
     public final static double SwerveKdFrontRight = 0.01;
     public final static double SwerveKfFrontRight = 0;
 
-    public final static double SwerveKpFrontLeft = 1.2;
+    public final static double SwerveKpFrontLeft = 1.55;
     public final static double SwerveKiFrontLeft = 0.05;
-    public final static double SwerveKdFrontLeft = 0.01;
+    public final static double SwerveKdFrontLeft = 0.015;
     public final static double SwerveKfFrontLeft = 0;
 
 
-    public final static double SwerveKpBackLeft = 1.5;
-    public final static double SwerveKiBackLeft = 0.05;
-    public final static double SwerveKdBackLeft = 0.01;
+    public final static double SwerveKpBackLeft = 1.6;
+    public final static double SwerveKiBackLeft = 0.01;
+    public final static double SwerveKdBackLeft = 0.015;
     public final static double SwerveKfBackLeft = 0;
 
     public final static double SwerveKpBackRight = 1.2;
