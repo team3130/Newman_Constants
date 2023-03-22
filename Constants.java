@@ -68,8 +68,8 @@ public final class Constants {
     /**
      * Encoder offsets
      */
-    public static final double kTopLeftOffset = Math.toRadians(268.682 - 180);
-    public static final double kBottomLeftOffset = Math.toRadians(281.426 - 180);
+    public static final double kTopLeftOffset = Math.toRadians(268.682);
+    public static final double kBottomLeftOffset = Math.toRadians(281.426);
     public static final double kTopRightOffset = Math.toRadians(129.3);
     public static final double kBottomRightOffset = Math.toRadians(0);
     public static final double[] kCanCoderOffsets = new double[] {kTopLeftOffset, kBottomLeftOffset, kTopRightOffset, kBottomRightOffset};
@@ -93,7 +93,6 @@ public final class Constants {
     public final static double kMaxRotaryArmVoltage = 9d;
     public final static double kMaxExtensionArmVoltage = 9d;
     public final static double kMaxVoltageHopper = 9d;
-    public final static double kMaxVoltageIntakeBeaterBar = 10d;
 
     /** Chassis auton */
     public static final double kPXController = 3;
@@ -106,7 +105,7 @@ public final class Constants {
     public static final double kIThetaController = 0;
 
     public static final double kMaxExtensionLength = 175000;
-    public static final double kMaxRotaryLength = 52669;
+    public static final double kMaxRotaryLength = 50000;
 
     public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI; // max spiny acceleration
     public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI; // max spiny velocity
@@ -152,7 +151,7 @@ public final class Constants {
 
     public final static double SwerveKpFrontRight = 1.35;
     public final static double SwerveKiFrontRight = 0.05;
-    public final static double SwerveKdFrontRight = 0.01;
+    public final static double SwerveKdFrontRight = 0;
     public final static double SwerveKfFrontRight = 0;
 
     public final static double SwerveKpFrontLeft = 1.55;
@@ -168,7 +167,7 @@ public final class Constants {
 
     public final static double SwerveKpBackRight = 1.2;
     public final static double SwerveKiBackRight = 0.05;
-    public final static double SwerveKdBackRight = 0.01;
+    public final static double SwerveKdBackRight = 0;
     public final static double SwerveKfBackRight = 0;
 
     public final static double[] SwerveKp = new double[] {SwerveKpFrontLeft, SwerveKpBackLeft, SwerveKpFrontRight, SwerveKpBackRight};
@@ -185,7 +184,7 @@ public final class Constants {
 
     public final static double openLoopRampRate = 0.7;
 
-    public final static double kPhysicalMaxSpeedMetersPerSecond = 3.6;
+    public final static double kPhysicalMaxSpeedMetersPerSecond = 2.5;
 
     public final static double kDeadband = 0.075;
 
