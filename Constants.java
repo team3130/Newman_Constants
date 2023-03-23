@@ -199,8 +199,8 @@ public final class Constants {
     public final static double kRotaryPlacementArmGearRatio = 0.0119008879; // experimentally found gear ratio
     public final static double kTicksToRadiansRotaryPlacementArm = (1/kEncoderResolution) * 2 * Math.PI * kRotaryPlacementArmGearRatio;
     public final static double kRadiansToTicksRotaryPlacementArm = 1/kTicksToRadiansRotaryPlacementArm;
-    public final static double kMaxVelocityRotaryPlacementArm = Math.PI/4;
-    public final static double kMaxAccelerationRotaryPlacementArm = Math.PI/8;
+    public final static double kMaxVelocityRotaryPlacementArm = Math.PI/5;
+    public final static double kMaxAccelerationRotaryPlacementArm = Math.PI/6;
 
     public static class Field {
 
@@ -227,7 +227,7 @@ public final class Constants {
      */
     public final static double kExtensionArmLengthExtended = Units.inchesToMeters(34);
 
-    public final static double kPercentOutputToHoldAtMaxExtension = 0.09;
+    public final static double kPercentOutputToHoldAtMaxExtension = 0.095;
     public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLengthExtended); // magic number that turns torque into motor output
     public final static double kExtensionArmGearRatio = 0.25;
     public final static double kTicksToRadiansExtensionPlacement = 1/(kEncoderResolution) * 2 * Math.PI * kExtensionArmGearRatio;
@@ -253,7 +253,7 @@ public final class Constants {
         // The position and orientation of the camera in meters
         public static final double xPos = Units.inchesToMeters(0);
         public static final double yPos = Units.inchesToMeters(12.5);
-        public static final double zPos = Units.inchesToMeters(38);
+        public static final double zPos = Units.inchesToMeters(-38);
 
         // TODO: Find these values
         public static final double pitch = -45;
