@@ -182,7 +182,9 @@ public final class Constants {
     public final static double BalanceKd = 0; //then this
     public final static double BalanceKf = 0.5; //idk what to do about this
 
-    public final static double openLoopRampRate = 0.7;
+    public final static double kExtensionArmP = 1;
+    public final static double kExtensionArmI = 0;
+    public final static double kExtensionArmD = 0.05;
 
     public final static double kPhysicalMaxSpeedMetersPerSecond = 3.54;
 
