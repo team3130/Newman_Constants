@@ -202,6 +202,15 @@ public final class Constants {
     public final static double kMaxVelocityRotaryPlacementArm = Math.PI/5;
     public final static double kMaxAccelerationRotaryPlacementArm = Math.PI/6;
 
+    public final static double kRotaryArmP = 0.6;
+    public final static double kRotaryArmI = 0.5;
+    public final static double kRotaryArmD = 0.075;
+
+    public static final double zeroPosition = 0;
+    public static final double lowPosition = Math.PI / 6;
+    public static final double midPosition = Math.PI / 4;
+    public static final double highPosition = Math.toRadians(100);
+
     public static class Field {
 
         public static final double[] yPositionsForRowBounds = new double[]{
