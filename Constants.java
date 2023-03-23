@@ -207,9 +207,9 @@ public final class Constants {
     public final static double kRotaryArmD = 0.075;
 
     public static final double zeroPosition = 0;
-    public static final double lowPosition = Math.PI / 6;
-    public static final double midPosition = Math.PI / 4;
-    public static final double highPosition = Math.toRadians(100);
+    public static final double lowPosition = Math.PI / 4;
+    public static final double midPosition = Math.toRadians(90);
+    public static final double highPosition = Math.toRadians(105);
 
     public static class Field {
 
