@@ -193,7 +193,7 @@ public final class Constants {
     public final static double kMaxAccelerationDrive = 7;
     public final static double kMaxAccelerationAngularDrive = 3;
 
-    public final static double kResetTime = 1.5;
+    public final static double kResetTime = 0.75;
 
     //Rotary Arm
     public final static double kRotaryPlacementArmGearRatio = 0.0119008879; // experimentally found gear ratio
@@ -202,10 +202,25 @@ public final class Constants {
     public final static double kMaxVelocityRotaryPlacementArm = Math.PI/4;
     public final static double kMaxAccelerationRotaryPlacementArm = Math.PI/8;
 
-    public static final double[] yPositionsForRowBounds = new double[] {
-            //0       1       2       3       4       5       6       7       8
-            0, 0.7875, 1.3465, 1.9055, 2.4645, 3.0235, 3.5825, 4.1415, 4.7005, 5.5
+    public static class Field {
+
+        public static final double[] yPositionsForRowBounds = new double[]{
+                //0       1       2       3       4       5       6       7       8
+                0, 0.7875, 1.3465, 1.9055, 2.4645, 3.0235, 3.5825, 4.1415, 4.7005, 5.5
         };
+
+        public static final double xPositionForGridBlue = 1.35;
+        public static final double xPositionForGridRed = 14.7;
+
+        public static final double xPositionForRedHumanPlayerStation = 0.75;
+        public static final double yPositionForRedHumanPlayerStation = 7.5;
+        public static final double rotationForRedHumanPlayerStation = (3*Math.PI) / 2;
+
+        public static final double xPositionForBlueHumanPlayerStation = 15.77;
+        public static final double yPositionForBlueHumanPlayerStation = 7.5;
+        public static final double rotationForBlueHumanPlayerStation = (Math.PI) / 2;
+
+    }
 
     /**
      * Extension arm
