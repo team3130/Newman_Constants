@@ -210,7 +210,7 @@ public final class Constants {
      */
     public final static double kExtensionArmLengthExtended = Units.inchesToMeters(34);
 
-    public final static double kPercentOutputToHoldAtMaxExtension = 0.09; //TODO: Find real value
+    public final static double kPercentOutputToHoldAtMaxExtension = 0.09;
     public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLengthExtended); // magic number that turns torque into motor output
     public final static double kExtensionArmGearRatio = 0.25;
     public final static double kTicksToRadiansExtensionPlacement = 1/(kEncoderResolution) * 2 * Math.PI * kExtensionArmGearRatio;
@@ -219,8 +219,8 @@ public final class Constants {
     // radians to distance is just radians * radius
     public final static double kRadiansToTicksExtensionPlacement = 1 / kTicksToRadiansExtensionPlacement;
     // public final static double kTicksToMetersExtensionPlacement = kTicksToRadiansExtensionPlacement * kExtensionShaftRadius;
-    public final static double kMaxVelocityPlacementExtensionArm = 0.2;
-    public final static double kMaxAccelerationPlacementExtensionArm = 0.2;
+    public final static double kMaxVelocityPlacementExtensionArm = 75000;
+    public final static double kMaxAccelerationPlacementExtensionArm = 100000;
 
     public static class Side {
          public static final int LEFT_FRONT = 0;
