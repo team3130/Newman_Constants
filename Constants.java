@@ -18,7 +18,7 @@ import edu.wpi.first.wpilibj.DriverStation;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static final boolean debugMode = false;
+    public static final boolean debugMode = true;
     public static final boolean kEliminationRound = (DriverStation.getMatchType() == DriverStation.MatchType.Elimination);
 
     /**
@@ -104,7 +104,7 @@ public final class Constants {
     public static final double kPThetaController = 7;
     public static final double kIThetaController = 0;
 
-    public static final double kMaxExtensionLength = 175000;
+    public static final double kMaxExtensionLength = 180000;
     public static final double kMaxRotaryLength = 50000;
 
     public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI; // max spiny acceleration
@@ -199,10 +199,10 @@ public final class Constants {
     public final static double kRotaryPlacementArmGearRatio = 0.0119008879; // experimentally found gear ratio
     public final static double kTicksToRadiansRotaryPlacementArm = (1/kEncoderResolution) * 2 * Math.PI * kRotaryPlacementArmGearRatio;
     public final static double kRadiansToTicksRotaryPlacementArm = 1/kTicksToRadiansRotaryPlacementArm;
-    public final static double kMaxVelocityRotaryPlacementArm = Math.PI/5;
-    public final static double kMaxAccelerationRotaryPlacementArm = Math.PI/6;
+    public final static double kMaxVelocityRotaryPlacementArm = Math.PI;
+    public final static double kMaxAccelerationRotaryPlacementArm = 2 * Math.PI;
 
-    public final static double kRotaryArmP = 0.7;
+    public final static double kRotaryArmP = 1;
     public final static double kRotaryArmI = 0.5;
     public final static double kRotaryArmD = 0.075;
 
@@ -236,7 +236,7 @@ public final class Constants {
      */
     public final static double kExtensionArmLengthExtended = Units.inchesToMeters(34);
 
-    public final static double kPercentOutputToHoldAtMaxExtension = 0.095;
+    public final static double kPercentOutputToHoldAtMaxExtension = 0.1;
     public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLengthExtended); // magic number that turns torque into motor output
     public final static double kExtensionArmGearRatio = 0.25;
     public final static double kTicksToRadiansExtensionPlacement = 1/(kEncoderResolution) * 2 * Math.PI * kExtensionArmGearRatio;
