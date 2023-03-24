@@ -202,7 +202,7 @@ public final class Constants {
     public final static double kMaxVelocityRotaryPlacementArm = Math.PI/5;
     public final static double kMaxAccelerationRotaryPlacementArm = Math.PI/6;
 
-    public final static double kRotaryArmP = 0.6;
+    public final static double kRotaryArmP = 0.7;
     public final static double kRotaryArmI = 0.5;
     public final static double kRotaryArmD = 0.075;
 
