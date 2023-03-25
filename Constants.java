@@ -18,7 +18,7 @@ import edu.wpi.first.wpilibj.DriverStation;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static final boolean debugMode = false;
+    public static final boolean debugMode = true;
     public static final boolean kEliminationRound = (DriverStation.getMatchType() == DriverStation.MatchType.Elimination);
 
     /**
@@ -202,7 +202,7 @@ public final class Constants {
     public final static double kMaxVelocityRotaryPlacementArm = Math.PI;
     public final static double kMaxAccelerationRotaryPlacementArm = 2 * Math.PI;
 
-    public final static double kRotaryArmP = 1;
+    public final static double kRotaryArmP = 0.6;
     public final static double kRotaryArmI = 0.5;
     public final static double kRotaryArmD = 0.075;
 
@@ -211,9 +211,9 @@ public final class Constants {
     public static final double midPosition = Math.toRadians(90);
     public static final double highPosition = Math.toRadians(105);
     public static final double offGroundAngle = Math.toRadians(12);
-    public static final double offGroundAngleCone = Math.toRadians(14);
-    public static final double offGroundPositionCube = 45000;
-    public static final double offGroundPositionCone = 47500;
+    public static final double offGroundAngleCone = 0.38;
+    public static final double offGroundPositionCone = 82065;
+    public static final double offGroundPositionCube = 85153;
 
     public static class Field {
 
@@ -240,7 +240,7 @@ public final class Constants {
      */
     public final static double kExtensionArmLengthExtended = Units.inchesToMeters(34);
 
-    public final static double kPercentOutputToHoldAtMaxExtension = 0.1;
+    public final static double kPercentOutputToHoldAtMaxExtension = 0.09;
     public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLengthExtended); // magic number that turns torque into motor output
     public final static double kExtensionArmGearRatio = 0.25;
     public final static double kTicksToRadiansExtensionPlacement = 1/(kEncoderResolution) * 2 * Math.PI * kExtensionArmGearRatio;
