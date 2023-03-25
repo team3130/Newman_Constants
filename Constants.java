@@ -18,7 +18,7 @@ import edu.wpi.first.wpilibj.DriverStation;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static final boolean debugMode = true;
+    public static final boolean debugMode = false;
     public static final boolean kEliminationRound = (DriverStation.getMatchType() == DriverStation.MatchType.Elimination);
 
     /**
@@ -210,6 +210,10 @@ public final class Constants {
     public static final double lowPosition = Math.PI / 4;
     public static final double midPosition = Math.toRadians(90);
     public static final double highPosition = Math.toRadians(105);
+    public static final double offGroundAngle = Math.toRadians(12);
+    public static final double offGroundAngleCone = Math.toRadians(14);
+    public static final double offGroundPositionCube = 45000;
+    public static final double offGroundPositionCone = 47500;
 
     public static class Field {
 
