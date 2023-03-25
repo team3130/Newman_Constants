@@ -206,14 +206,11 @@ public final class Constants {
     public final static double kRotaryArmI = 0.5;
     public final static double kRotaryArmD = 0.075;
 
-    public static final double zeroPosition = 0;
     public static final double lowPosition = Math.PI / 4;
     public static final double midPosition = Math.toRadians(90);
     public static final double highPosition = Math.toRadians(105);
-    public static final double offGroundAngle = Math.toRadians(12);
     public static final double offGroundAngleCone = 0.38;
     public static final double offGroundPositionCone = 82065;
-    public static final double offGroundPositionCube = 85153;
 
     public static class Field {
 
