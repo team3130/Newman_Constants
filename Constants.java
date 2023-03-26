@@ -211,6 +211,7 @@ public final class Constants {
     public static final double highPosition = Math.toRadians(105);
     public static final double offGroundAngleCone = 0.38;
     public static final double offGroundPositionCone = 82065;
+    public static final boolean listener = true;
 
     public static class Field {
 
