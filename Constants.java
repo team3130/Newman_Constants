@@ -177,10 +177,10 @@ public final class Constants {
 
 
     //Balancing PID values
-    public final static double BalanceKp = -2.25; //do this first
+    public final static double BalanceKp = 2.25; //do this first
     public final static double BalanceKi = 0; //this isn't real
     public final static double BalanceKd = 0; //then this
-    public final static double BalanceKf = 0.5; //idk what to do about this
+    public final static double BalanceKf = 0.4; //idk what to do about this
 
     public final static double kExtensionArmP = 1;
     public final static double kExtensionArmI = 0;
