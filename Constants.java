@@ -18,7 +18,7 @@ import edu.wpi.first.wpilibj.DriverStation;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static final boolean debugMode = false;
+    public static final boolean debugMode = true;
     public static final boolean kEliminationRound = (DriverStation.getMatchType() == DriverStation.MatchType.Elimination);
 
     /**
@@ -236,10 +236,10 @@ public final class Constants {
     /**
      * Extension arm
      */
-    public final static double kExtensionArmLengthExtended = Units.inchesToMeters(34);
+    public final static double kExtensionArmLengthExtendedMeters = Units.inchesToMeters(34);
 
     public final static double kPercentOutputToHoldAtMaxExtension = 0.09;
-    public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLengthExtended); // magic number that turns torque into motor output
+    public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLengthExtendedMeters); // magic number that turns torque into motor output
     public final static double kExtensionArmGearRatio = 0.25;
     public final static double kTicksToRadiansExtensionPlacement = 1/(kEncoderResolution) * 2 * Math.PI * kExtensionArmGearRatio;
     public final static double kExtensionHexShaftRadius = Units.inchesToMeters(0.25);
@@ -249,6 +249,9 @@ public final class Constants {
     // public final static double kTicksToMetersExtensionPlacement = kTicksToRadiansExtensionPlacement * kExtensionShaftRadius;
     public final static double kMaxVelocityPlacementExtensionArm = 100000;
     public final static double kMaxAccelerationPlacementExtensionArm = 125000;
+
+    // should be the length of the extension arm when it is retracted in meters
+    public static final double kExtensionArmLengthRetractedMeters = kTicksToMetersExtension * ((Units.inchesToMeters(34) * (1/kTicksToMetersExtension)) - kMaxExtensionLength);
 
     public static class Side {
          public static final int LEFT_FRONT = 0;
