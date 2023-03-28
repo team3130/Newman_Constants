@@ -218,7 +218,7 @@ public final class Constants {
         public final static double kExtensionArmI = 0;
         public final static double kExtensionArmD = 0.05;
 
-        public final static double kExtensionArmLengthExtendedMeters = Units.inchesToMeters(34);
+        public final static double kExtensionArmLengthExtendedMeters = Units.inchesToMeters(42);
 
         public final static double kPercentOutputToHoldAtMaxExtension = 0.09;
 
@@ -234,7 +234,8 @@ public final class Constants {
         public final static double kMaxAccelerationPlacementExtensionArm = 125000;
 
         // should be the length of the extension arm when it is retracted in meters
-        public static final double kExtensionArmLengthRetractedMeters = kTicksToMetersExtension * ((Units.inchesToMeters(34) * (1/kTicksToMetersExtension)) - kMaxExtensionLength);
+        public static final double kExtensionArmLengthRetractedMeters = Units.inchesToMeters(24);
+            /*kTicksToMetersExtension * (kMaxExtensionLength - (kExtensionArmLengthExtendedMeters * (1/kTicksToMetersExtension)));*/ // should e 24 inches
     }
 
     public static class Field {
