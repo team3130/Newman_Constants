@@ -210,7 +210,7 @@ public final class Constants {
     public static class Extension {
         public static final double offGroundPosition = 82065;
         public static final double kMaxExtensionLength = 180000;
-        public static final double kPositionWithinBot = 25000;
+        public static final double kPositionWithinBot = 14000;
 
         public static final double intermediatePosition = kMaxExtensionLength / 2;
 
