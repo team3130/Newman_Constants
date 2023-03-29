@@ -5,6 +5,7 @@
 package frc.robot.Newman_Constants;
 
 import edu.wpi.first.math.geometry.Translation2d;
+import edu.wpi.first.math.geometry.Translation3d;
 import edu.wpi.first.math.trajectory.TrapezoidProfile;
 import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.DriverStation;
@@ -206,6 +207,9 @@ public final class Constants {
     public static final double highPosition = Math.toRadians(105);
     public static final double offGroundAngleCone = 0.38;
     public static final boolean listener = true;
+
+    //TODO: get placement height above ground
+    public static final Translation3d kPlacementAxleHeightAboveGround = new Translation3d(0, 0, Units.inchesToMeters(27));
 
     public static class Extension {
         public static final double offGroundPosition = 82065;
