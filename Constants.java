@@ -295,7 +295,7 @@ public final class Constants {
         public static final double zPos = Units.inchesToMeters(-38);
 
         // TODO: Find these values
-        public static final double pitch = -32;
+        public static final double pitch = -20;
         public static final double yaw = 0;
         public static final double roll = 0;
 
