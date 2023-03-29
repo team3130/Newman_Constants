@@ -208,9 +208,6 @@ public final class Constants {
     public static final double offGroundAngleCone = 0.38;
     public static final boolean listener = true;
 
-    //TODO: get placement height above ground
-    public static final Translation3d kPlacementAxleHeightAboveGround = new Translation3d(0, 0, Units.inchesToMeters(27));
-
     public static class Extension {
         public static final double offGroundPosition = 82065;
         public static final double kMaxExtensionLength = 180000;
@@ -260,6 +257,24 @@ public final class Constants {
         public static final double yPositionForBlueHumanPlayerStation = 7.5;
         public static final double rotationForBlueHumanPlayerStation = (3*Math.PI) / 2;
 
+        //TODO: get placement height above ground
+        public static final Translation3d kPlacementAxleHeightAboveGround = new Translation3d(0, 0, Units.inchesToMeters(27));
+
+        public static final double heightOfConeSpireOne = 0;
+        public static final double heightOfConeSpireTwo = 0;
+        public static final double depthOfConeSpireOne = 0;
+        public static final double depthOfConeSpireTwo = 0;
+
+        public static final double heightOfCubeSpotOne = 0;
+        public static final double heightOfCubeSpotTwo = 0;
+        public static final double depthOfCubeSpotOne = 0;
+        public static final double depthOfCubeSpotTwo = 0;
+
+        // true for cone spot, false for cube spot. ignore bottom row
+        public static final boolean[] coneSpots = new boolean[] {
+                true, false, true, true, false, true, true, false, true,
+                true, false, true, true, false, true, true, false, true,
+        };
     }
 
 
