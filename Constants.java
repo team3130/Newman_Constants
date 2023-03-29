@@ -212,13 +212,13 @@ public final class Constants {
         public static final double kMaxExtensionLength = 180000;
         public static final double kPositionWithinBot = 14000;
 
-        public static final double intermediatePosition = kMaxExtensionLength / 2;
+        public static final double intermediatePosition = 0;
 
         public final static double kExtensionArmP = 1;
         public final static double kExtensionArmI = 0;
         public final static double kExtensionArmD = 0.05;
 
-        public final static double kExtensionArmLengthExtendedMeters = Units.inchesToMeters(42);
+        public final static double kExtensionArmLengthExtendedMeters = Units.inchesToMeters(40);
 
         public final static double kPercentOutputToHoldAtMaxExtension = 0.09;
 
@@ -230,11 +230,11 @@ public final class Constants {
         // radians to distance is just radians * radius
         public final static double kRadiansToTicksExtensionPlacement = 1 / kTicksToRadiansExtensionPlacement;
         // public final static double kTicksToMetersExtensionPlacement = kTicksToRadiansExtensionPlacement * kExtensionShaftRadius;
-        public final static double kMaxVelocityPlacementExtensionArm = 100000;
-        public final static double kMaxAccelerationPlacementExtensionArm = 125000;
+        public final static double kMaxVelocityPlacementExtensionArm = 125000;
+        public final static double kMaxAccelerationPlacementExtensionArm = 150000;
 
         // should be the length of the extension arm when it is retracted in meters
-        public static final double kExtensionArmLengthRetractedMeters = Units.inchesToMeters(24);
+        public static final double kExtensionArmLengthRetractedMeters = Units.inchesToMeters(19);
             /*kTicksToMetersExtension * (kMaxExtensionLength - (kExtensionArmLengthExtendedMeters * (1/kTicksToMetersExtension)));*/ // should e 24 inches
     }
 
@@ -250,11 +250,11 @@ public final class Constants {
 
         public static final double xPositionForRedHumanPlayerStation = 0.75;
         public static final double yPositionForRedHumanPlayerStation = 7.5;
-        public static final double rotationForRedHumanPlayerStation = (3*Math.PI) / 2;
+        public static final double rotationForRedHumanPlayerStation = (Math.PI) / 2;
 
         public static final double xPositionForBlueHumanPlayerStation = 15.77;
         public static final double yPositionForBlueHumanPlayerStation = 7.5;
-        public static final double rotationForBlueHumanPlayerStation = (Math.PI) / 2;
+        public static final double rotationForBlueHumanPlayerStation = (3*Math.PI) / 2;
 
     }
 
@@ -276,7 +276,7 @@ public final class Constants {
         public static final double zPos = Units.inchesToMeters(-38);
 
         // TODO: Find these values
-        public static final double pitch = -45;
+        public static final double pitch = -32;
         public static final double yaw = 0;
         public static final double roll = 0;
 
