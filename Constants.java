@@ -204,7 +204,7 @@ public final class Constants {
 
     public static final double lowPosition = Math.PI / 4;
     public static final double midPosition = Math.toRadians(90);
-    public static final double highPosition = Math.toRadians(105);
+    public static final double highPosition = Math.toRadians(100);
     public static final double offGroundAngleCone = Math.toRadians(20);
     public static final boolean listener = true;
     public static final double midPositionCones = Math.toRadians(100);
