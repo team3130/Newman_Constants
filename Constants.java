@@ -92,7 +92,7 @@ public final class Constants {
     public final static double kMaxSteerVoltage = 5d;
     public final static double kMaxDriveVoltage = 8d;
     public final static double kMaxRotaryArmVoltage = 9d;
-    public final static double kMaxExtensionArmVoltage = 9d;
+    public final static double kMaxExtensionArmVoltage = 10.5d;
     public final static double kMaxVoltageHopper = 9d;
 
     /** Chassis auton */
@@ -195,16 +195,16 @@ public final class Constants {
     public final static double kRotaryPlacementArmGearRatio = 0.0119008879; // experimentally found gear ratio
     public final static double kTicksToRadiansRotaryPlacementArm = (1/kEncoderResolution) * 2 * Math.PI * kRotaryPlacementArmGearRatio;
     public final static double kRadiansToTicksRotaryPlacementArm = 1/kTicksToRadiansRotaryPlacementArm;
-    public final static double kMaxVelocityRotaryPlacementArm = Math.PI;
-    public final static double kMaxAccelerationRotaryPlacementArm = 2 * Math.PI;
+    public final static double kMaxVelocityRotaryPlacementArm =  0.75 * Math.PI;
+    public final static double kMaxAccelerationRotaryPlacementArm = Math.PI;
 
-    public final static double kRotaryArmP = 0.1;
-    public final static double kRotaryArmI = 0.5;
+    public final static double kRotaryArmP = 0.6;
+    public final static double kRotaryArmI = 0;
     public final static double kRotaryArmD = 0.075;
 
     public static final double lowPosition = Math.PI / 4;
     public static final double midPosition = Math.toRadians(90);
-    public static final double highPosition = Math.toRadians(100);
+    public static final double highPosition = Math.toRadians(110);
     public static final double offGroundAngleCone = Math.toRadians(20);
     public static final boolean listener = true;
     public static final double midPositionCones = Math.toRadians(100);
@@ -221,10 +221,11 @@ public final class Constants {
         public final static double kExtensionArmD = 0.05;
 
         public final static double kExtensionArmLengthExtendedMeters = Units.inchesToMeters(40);
+        public static final double kExtensionArmLengthRetractedMeters = Units.inchesToMeters(25);
 
         public final static double kPercentOutputToHoldAtMaxExtension = 0.09;
 
-        public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kExtensionArmLengthExtendedMeters); // magic number that turns torque into motor output
+        public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kMaxExtensionLength); // magic number that turns torque into motor output
         public final static double kExtensionArmGearRatio = 0.25;
         public final static double kTicksToRadiansExtensionPlacement = 1/(kEncoderResolution) * 2 * Math.PI * kExtensionArmGearRatio;
         public final static double kExtensionHexShaftRadius = Units.inchesToMeters(0.25);
@@ -236,7 +237,6 @@ public final class Constants {
         public final static double kMaxAccelerationPlacementExtensionArm = 150000;
 
         // should be the length of the extension arm when it is retracted in meters
-        public static final double kExtensionArmLengthRetractedMeters = Units.inchesToMeters(19);
             /*kTicksToMetersExtension * (kMaxExtensionLength - (kExtensionArmLengthExtendedMeters * (1/kTicksToMetersExtension)));*/ // should e 24 inches
     }
 
