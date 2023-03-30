@@ -182,7 +182,7 @@ public final class Constants {
     public final static double BalanceKd = 0; //then this
     public final static double BalanceKf = 0.4; //idk what to do about this
 
-    public final static double kPhysicalMaxSpeedMetersPerSecond = 3.54;
+    public final static double kPhysicalMaxSpeedMetersPerSecond = 4.788; // 3.54 with voltage compensation
 
     public final static double kDeadband = 0.075;
 
