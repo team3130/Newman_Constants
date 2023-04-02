@@ -51,7 +51,7 @@ public final class Constants {
     /**
      * PNM ID's
      */
-    public static final int PNM_SmallSolenoid = 2;
+    public static final int PNM_Intake = 2;
     public final static int PNM_Grabber = 0;
     public static final int PNM_Brake = 1;
 
@@ -104,8 +104,6 @@ public final class Constants {
     public static final double kDYController = 0;
     public static final double kPThetaController = 7;
     public static final double kIThetaController = 0;
-
-    public static final double kMaxRotaryLength = 50000;
 
     public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI; // max spiny acceleration
     public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI; // max spiny velocity
