@@ -19,7 +19,7 @@ import edu.wpi.first.wpilibj.DriverStation;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static final boolean debugMode = false;
+    public static final boolean debugMode = true;
     public static final boolean kEliminationRound = (DriverStation.getMatchType() == DriverStation.MatchType.Elimination);
 
     /**
@@ -209,7 +209,7 @@ public final class Constants {
 
     public static class Extension {
         public static final double offGroundPosition = 82065;
-        public static final double kMaxExtensionLength = 180000;
+        public static final double kMaxExtensionLength = 190000;
         public static final double kPositionWithinBot = 14000;
 
         public static final double intermediatePosition = 0;
