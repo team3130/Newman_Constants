@@ -259,15 +259,19 @@ public final class Constants {
         //TODO: get placement height above ground
         public static final Translation3d kPlacementAxleHeightAboveGround = new Translation3d(0, 0, Units.inchesToMeters(27));
 
-        public static final double heightOfConeSpireOne = 0;
-        public static final double heightOfConeSpireTwo = 0;
-        public static final double depthOfConeSpireOne = 0;
-        public static final double depthOfConeSpireTwo = 0;
+        public static final double heightOfConeSpireOne = 0.864;
+        public static final double heightOfConeSpireTwo = 1.168;
+        public static final double depthOfConeSpireOneSmall = 0.41;
+        public static final double depthOfConeSpireOneBig = 0.795;
+        public static final double depthOfConeSpireTwoSmall = 0.795;
+        public static final double depthOfConeSpireTwoBig = 1.43;
 
-        public static final double heightOfCubeSpotOne = 0;
-        public static final double heightOfCubeSpotTwo = 0;
-        public static final double depthOfCubeSpotOne = 0;
-        public static final double depthOfCubeSpotTwo = 0;
+        public static final double heightOfCubeSpotOne = 0.597;
+        public static final double heightOfCubeSpotTwo = 0.902;
+        public static final double depthOfCubeSpotOneSmall = 0.36;
+        public static final double depthOfCubeSpotOneBig = 0.7526586;
+        public static final double depthOfCubeSpotTwoSmall = 0.7526586;
+        public static final double depthOfCubeSpotTwoBig = 1.43;
 
         // true for cone spot, false for cube spot. ignore bottom row
         public static final boolean[] coneSpots = new boolean[] {
