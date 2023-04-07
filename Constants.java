@@ -185,7 +185,7 @@ public final class Constants {
     public final static double kDeadband = 0.075;
 
     public final static double kMaxAccelerationDrive = 7;
-    public final static double kMaxAccelerationAngularDrive = 3;
+    public final static double kMaxAccelerationAngularDrive = Math.PI;
 
     public final static double kResetTime = 0.75;
 
