@@ -298,9 +298,9 @@ public final class Constants {
         public static final double zPos = Units.inchesToMeters(-38);
 
         // TODO: Find these values
-        public static final double pitch = -15;
-        public static final double yaw = 0;
-        public static final double roll = 0;
+        public static final double pitch = Math.toRadians(15);
+        public static final double yaw = Math.toRadians(0);
+        public static final double roll = Math.toRadians(0);
 
         public static double confidenceN1 = 0; // I'm guessing x component confidence
         public static double confidenceN2 = 0; // I'm guessing y component confidence
