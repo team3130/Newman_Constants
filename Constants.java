@@ -20,6 +20,8 @@ import edu.wpi.first.wpilibj.DriverStation;
  */
 public final class Constants {
     public static final boolean debugMode = true;
+    public static final boolean useAprilTags = true;
+
     public static final boolean kEliminationRound = (DriverStation.getMatchType() == DriverStation.MatchType.Elimination);
 
     /**
