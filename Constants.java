@@ -97,6 +97,8 @@ public final class Constants {
     public final static double kMaxExtensionArmVoltage = 10.5d;
     public final static double kMaxVoltageHopper = 9d;
 
+    public final static double PitchOffset = -12; // degrees
+
     /** Chassis auton */
     public static final double kPXController = 3;
     public static final double kIXController = 0.5;
