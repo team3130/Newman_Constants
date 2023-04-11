@@ -310,7 +310,7 @@ public final class Constants {
         public static double confidenceN2 = 0; // I'm guessing y component confidence
         public static double confidenceN3 = 0; // I'm guessing theta component confidence
 
-        public final static int kMedianFilterWindowSize = 5;
+        public final static int kMedianFilterWindowSize = 10;
 
         public static double kCameraFOV = 0; // TODO: Find real value
     }
