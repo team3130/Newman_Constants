@@ -92,7 +92,7 @@ public final class Constants {
 
 
     public final static double kMaxSteerVoltage = 5d;
-    public final static double kMaxDriveVoltage = 8d;
+    public final static double kMaxDriveVoltage = 10d;
     public final static double kMaxRotaryArmVoltage = 9d;
     public final static double kMaxExtensionArmVoltage = 10.5d;
     public final static double kMaxVoltageHopper = 9d;
@@ -184,7 +184,7 @@ public final class Constants {
     public final static double BalanceKd = 0; //then this
     public final static double BalanceKf = 0.4; //idk what to do about this
 
-    public final static double kPhysicalMaxSpeedMetersPerSecond = 4.788; // 3.54 with voltage compensation
+    public final static double kPhysicalMaxSpeedMetersPerSecond = 4.19; // 3.54 with 8 volts of voltage compensation and 4.19 with 10 volts
 
     public final static double kDeadband = 0.075;
 
