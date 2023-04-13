@@ -101,13 +101,14 @@ public final class Constants {
 
     /** Chassis auton */
     public static final double kPXController = 3;
-    public static final double kIXController = 0.5;
+    public static final double kIXController = 0;
     public static final double kDXController = 0;
     public static final double kPYController = 3;
-    public static final double kIYController = 0.5;
+    public static final double kIYController = 0;
     public static final double kDYController = 0;
     public static final double kPThetaController = 7;
     public static final double kIThetaController = 0;
+    public static final double kDThetaController = 0;
 
     public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI; // max spiny acceleration
     public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI; // max spiny velocity
@@ -298,11 +299,11 @@ public final class Constants {
     public static class Camera {
         // The position and orientation of the camera in meters
         public static final double xPos = Units.inchesToMeters(0);
-        public static final double yPos = Units.inchesToMeters(12.5);
+        public static final double yPos = Units.inchesToMeters(-4);
         public static final double zPos = Units.inchesToMeters(-38);
 
         // TODO: Find these values
-        public static final double pitch = Math.toRadians(15);
+        public static final double pitch = Math.toRadians(-15);
         public static final double yaw = Math.toRadians(0);
         public static final double roll = Math.toRadians(0);
 
