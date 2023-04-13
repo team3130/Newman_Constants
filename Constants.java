@@ -201,7 +201,7 @@ public final class Constants {
     public final static double kMaxVelocityRotaryPlacementArm =  0.75 * Math.PI;
     public final static double kMaxAccelerationRotaryPlacementArm = Math.PI;
 
-    public final static double kRotaryArmP = 0.6;
+    public final static double kRotaryArmP = 0.75;
     public final static double kRotaryArmI = 0;
     public final static double kRotaryArmD = 0.075;
 
@@ -226,7 +226,7 @@ public final class Constants {
         public final static double kExtensionArmLengthExtendedMeters = Units.inchesToMeters(40);
         public static final double kExtensionArmLengthRetractedMeters = Units.inchesToMeters(25);
 
-        public final static double kPercentOutputToHoldAtMaxExtension = 0.09;
+        public final static double kPercentOutputToHoldAtMaxExtension = 0.1;
 
         public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kMaxExtensionLength); // magic number that turns torque into motor output
         public final static double kExtensionArmGearRatio = 0.25;
