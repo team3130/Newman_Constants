@@ -244,10 +244,22 @@ public final class Constants {
     }
 
     public static class Balance{
-        public static final double defaultPitchZero = -7.15;
+        public static final double defaultPitchZero = -2.0;
         public static final double driveSpeed = 0.525;
         public static final double pitchDeadband = 3.5;
+
+        //Used in normal balance
         public static final double pitchVelocityDeadband = 0.01;
+        //Used in OnToRamp  
+        public static final double changeForRampPitch = 5.0;
+
+        //Used in DeadReckonBalance
+        public static final double tippedtoStationCenterDistance = 0.8;
+
+        //used in PathPoints
+        public static final double toStationCenterDistance = 2.2; 
+        public static final double overStationDistance = 4.6;
+        public static final double backToStationCenterDistance = 2.4;
     }
 
     public static class Field {
