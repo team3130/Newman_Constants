@@ -243,6 +243,13 @@ public final class Constants {
             /*kTicksToMetersExtension * (kMaxExtensionLength - (kExtensionArmLengthExtendedMeters * (1/kTicksToMetersExtension)));*/ // should e 24 inches
     }
 
+    public static class Balance{
+        public static final double defaultPitchZero = -7.15;
+        public static final double driveSpeed = 0.525;
+        public static final double pitchDeadband = 3.5;
+        public static final double pitchVelocityDeadband = 0.01;
+    }
+
     public static class Field {
 
         public static final double[] yPositionsForRowBounds = new double[]{
