@@ -247,6 +247,8 @@ public final class Constants {
         public static final double defaultPitchZero = -2.0;
         public static final double driveSpeed = 0.525;
         public static final double pitchDeadband = 3.5;
+        public static final double safetyTimeLimit = 3.25;
+        public static final double HeadingkP = 1.0;
 
         //Used in normal balance
         public static final double pitchVelocityDeadband = 0.01;
