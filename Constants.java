@@ -262,6 +262,9 @@ public final class Constants {
         public static final double toStationCenterDistance = 2.2; 
         public static final double overStationDistance = 4.6;
         public static final double backToStationCenterDistance = 2.4;
+
+         //Search Balance 
+        public static final double initSearchDistance = 0.46; 
     }
 
     public static class Field {
