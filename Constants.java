@@ -198,8 +198,8 @@ public final class Constants {
     public final static double kRotaryPlacementArmGearRatio = 0.0119008879; // experimentally found gear ratio
     public final static double kTicksToRadiansRotaryPlacementArm = (1/kEncoderResolution) * 2 * Math.PI * kRotaryPlacementArmGearRatio;
     public final static double kRadiansToTicksRotaryPlacementArm = 1/kTicksToRadiansRotaryPlacementArm;
-    public final static double kMaxVelocityRotaryPlacementArm =  0.75 * Math.PI;
-    public final static double kMaxAccelerationRotaryPlacementArm = Math.PI;
+    public final static double kMaxVelocityRotaryPlacementArm =  Math.PI;
+    public final static double kMaxAccelerationRotaryPlacementArm = 1.5 * Math.PI;
 
     public final static double kRotaryArmP = 0.75;
     public final static double kRotaryArmI = 0;
@@ -211,10 +211,12 @@ public final class Constants {
     public static final double offGroundAngleCone = Math.toRadians(20);
     public static final boolean listener = true;
     public static final double midPositionCones = Math.toRadians(100);
+    public static final double AprilTagTrustDistance = 5;
 
     public static class Extension {
         public static final double offGroundPosition = 82065;
         public static final double kMaxExtensionLength = 190000;
+        public static final double kExtensionLengthRetracted = 190000;
         public static final double kPositionWithinBot = 14000;
 
         public static final double intermediatePosition = 0;
@@ -228,7 +230,7 @@ public final class Constants {
 
         public final static double kPercentOutputToHoldAtMaxExtension = 0.1;
 
-        public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kMaxExtensionLength); // magic number that turns torque into motor output
+        public final static double kRotaryStaticGain = kPercentOutputToHoldAtMaxExtension / (kMaxExtensionLength + Extension.kExtensionLengthRetracted); // magic number that turns torque into motor output
         public final static double kExtensionArmGearRatio = 0.25;
         public final static double kTicksToRadiansExtensionPlacement = 1/(kEncoderResolution) * 2 * Math.PI * kExtensionArmGearRatio;
         public final static double kExtensionHexShaftRadius = Units.inchesToMeters(0.25);
