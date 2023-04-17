@@ -199,17 +199,16 @@ public final class Constants {
     public final static double kTicksToRadiansRotaryPlacementArm = (1/kEncoderResolution) * 2 * Math.PI * kRotaryPlacementArmGearRatio;
     public final static double kRadiansToTicksRotaryPlacementArm = 1/kTicksToRadiansRotaryPlacementArm;
     public final static double kMaxVelocityRotaryPlacementArm =  Math.PI;
-    public final static double kMaxAccelerationRotaryPlacementArm = 1.5 * Math.PI;
+    public final static double kMaxAccelerationRotaryPlacementArm = 2 * Math.PI;
 
-    public final static double kRotaryArmP = 0.75;
+    public final static double kRotaryArmP = 4;
     public final static double kRotaryArmI = 0;
-    public final static double kRotaryArmD = 0.075;
+    public final static double kRotaryArmD = 0;
 
     public static final double lowPosition = Math.PI / 4;
     public static final double midPosition = Math.toRadians(90);
-    public static final double highPosition = Math.toRadians(120);
-    public static final double offGroundAngleCone = Math.toRadians(20);
-    public static final boolean listener = true;
+    public static final double highPosition = Math.toRadians(127.5);
+    public static final double offGroundAngleCone = Math.toRadians(25);
     public static final double midPositionCones = Math.toRadians(100);
     public static final double AprilTagTrustDistance = 5;
 
