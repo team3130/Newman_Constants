@@ -245,16 +245,20 @@ public final class Constants {
     }
 
     public static class Balance{
-        public static final double defaultPitchZero = -2.0;
+        public static final double safetyTimeLimit = 7.5;
+        public static final double stablizationTime = 0.75;
+        public static final double defaultPitchZero = -0.75;
         public static final double driveSpeed = 0.525;
         public static final double pitchDeadband = 3.5;
-        public static final double safetyTimeLimit = 3.25;
+       
         public static final double HeadingkP = 1.0;
+        
 
         //Used in normal balance
         public static final double pitchVelocityDeadband = 0.01;
         //Used in OnToRamp  
         public static final double changeForRampPitch = 5.0;
+        public static final double toRampSafetyTimeLimit = 3.25;
 
         //Used in DeadReckonBalance
         public static final double tippedtoStationCenterDistance = 0.8;
