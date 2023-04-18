@@ -111,7 +111,7 @@ public final class Constants {
     public static final double kDThetaController = 0;
 
     public static final double kMaxAngularAccelerationRadiansPerSecondSquared = Math.PI; // max spiny acceleration
-    public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI; // max spiny velocity
+    public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * Math.PI; // max spiny velocity
     // real max spiny speed (multiply by some number for safety)
     public static final double kMaxAngularSpeedRadiansPerSecond =  kPhysicalMaxAngularSpeedRadiansPerSecond;
     // spiny PID constraints
@@ -190,7 +190,7 @@ public final class Constants {
     public final static double kDeadband = 0.075;
 
     public final static double kMaxAccelerationDrive = 7;
-    public final static double kMaxAccelerationAngularDrive = Math.PI;
+    public final static double kMaxAccelerationAngularDrive = 4.0*Math.PI;
 
     public final static double kResetTime = 0.75;
 
