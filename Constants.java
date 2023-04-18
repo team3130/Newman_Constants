@@ -257,7 +257,7 @@ public final class Constants {
         //Used in normal balance
         public static final double pitchVelocityDeadband = 0.01;
         //Used in OnToRamp  
-        public static final double changeForRampPitch = 5.0;
+        public static final double changeForRampPitch = 9.0;
         public static final double toRampSafetyTimeLimit = 3.25;
 
         //Used in DeadReckonBalance
@@ -269,7 +269,7 @@ public final class Constants {
         public static final double backToStationCenterDistance = 2.4;
 
          //Search Balance 
-        public static final double initSearchDistance = 0.46; 
+        public static final double initSearchDistance = 1.20; 
     }
 
     public static class Field {
