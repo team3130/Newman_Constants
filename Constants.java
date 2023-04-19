@@ -248,7 +248,7 @@ public final class Constants {
         public static final double safetyTimeLimit = 7.5;
         public static final double stablizationTime = 0.75;
         public static final double defaultPitchZero = -0.75;
-        public static final double driveSpeed = 0.525;
+        public static final double driveSpeed = 0.315;
         public static final double pitchDeadband = 3.5;
        
         public static final double HeadingkP = 1.0;
