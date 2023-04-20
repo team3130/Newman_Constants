@@ -19,7 +19,7 @@ import edu.wpi.first.wpilibj.DriverStation;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static final boolean debugMode = true;
+    public static final boolean debugMode = false;
     public static final boolean useAprilTags = true;
 
     public static final boolean kEliminationRound = (DriverStation.getMatchType() == DriverStation.MatchType.Elimination);
